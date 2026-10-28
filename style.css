@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f4fb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.todo-container {
+  background: white;
+  width: 100%;
+  max-width: 550px;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px #00000010;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 26px;
+  color: #202b45;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #7b8498;
+  font-size: 14px;
+}
+
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+#todo-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dce1eb;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+}
+
+#todo-input:focus {
+  border-color: #477bfa;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+#todo-form button {
+  background: #477bfa;
+  color: white;
+  padding: 0 18px;
+}
+
+#todo-form button:hover {
+  background: #3265df;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #edf0f5;
+  padding-bottom: 14px;
+  margin-bottom: 8px;
+}
+
+.filter {
+  background: transparent;
+  color: #737d91;
+  padding: 8px 12px;
+}
+
+.filter.active {
+  background: #eaf0ff;
+  color: #3868e8;
+}
+
+#todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 4px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.todo-item input {
+  width: 17px;
+  height: 17px;
+  accent-color: #477bfa;
+  cursor: pointer;
+}
+
+.todo-text {
+  flex: 1;
+  color: #30394d;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #a0a7b5;
+}
+
+.delete-btn {
+  background: #fff0f0;
+  color: #e05252;
+  padding: 7px 10px;
+}
+
+.delete-btn:hover {
+  background: #ffdddd;
+}
+
+.empty-message {
+  text-align: center;
+  color: #939bad;
+  padding: 28px 0;
+  font-size: 14px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #7b8498;
+  font-size: 13px;
+}
+
+#clear-completed {
+  background: #f0f2f7;
+  color: #586176;
+  padding: 9px 12px;
+}
+
+#clear-completed:hover {
+  background: #e2e6ef;
+}
+
+@media (max-width: 450px) {
+  .todo-container {
+    padding: 20px;
+  }
+
+  .filters {
+    gap: 2px;
+  }
+
+  .filter {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
